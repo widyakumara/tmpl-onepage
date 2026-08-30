@@ -1,6 +1,6 @@
 repository:
-  description: "template: bun + astro + tailwind"
-  topics: bun, astro, tailwind
+  description: "onepage website"
+  topics: onepage, website
   private: false
   has_issues: false
   has_projects: false
