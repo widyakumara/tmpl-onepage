@@ -1,5 +1,4 @@
 // @ts-check
-import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
@@ -18,7 +17,7 @@ export default defineConfig({
     assets: "inc",
   },
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [],
     esbuild: { legalComments: "none" },
     build: {
       emptyOutDir: true,

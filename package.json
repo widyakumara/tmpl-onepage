@@ -18,19 +18,22 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.3.3",
-    "astro": "^7.2.9",
-    "tailwindcss": "^4.3.3"
+    "astro": "^7.2.9"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@tailwindcss/postcss": "^4.3.3",
     "@types/bun": "^1.4.0",
     "@typescript-eslint/parser": "^8.68.0",
+    "cssnano": "^8.0.8",
+    "cssnano-preset-advanced": "^8.0.8",
     "eslint": "^10.9.1",
     "eslint-plugin-astro": "^3.1.0",
     "lefthook": "^2.1.10",
+    "postcss": "^8.5.26",
     "prettier": "^3.9.6",
     "prettier-plugin-astro": "^0.14.1",
+    "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.68.0"
   }
