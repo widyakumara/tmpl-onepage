@@ -1,47 +1,70 @@
-html,
-body {
-  min-height: 100dvh;
-  scroll-snap-type: y mandatory;
-  /* scroll-snap-type: y proximity; */
+* {
+  @apply outline-0 leading-none;
+}
+
+html {
+  @apply lexend scroll-smooth min-h-dvh;
+  @apply snap-y snap-mandatory;
+  @apply scrollbar-none;
+  /* @apply scrollbar-gutter-both scrollbar-thin; */
+  @apply scrollbar-thumb-transparent scrollbar-track-transparent;
+  color: var(--base-fore);
+  background-color: var(--base-back);
 }
 
 #root {
-  width: 40em;
-  margin-inline: auto;
+  @apply mx-auto;
+}
+
+#head,
+#foot {
+  .wrap {
+    @apply flex items-center justify-between;
+  }
+}
+
+.wrap {
+  @apply mx-auto w-10/12;
 }
 
 #head {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  height: 64px;
-  margin-bottom: -64px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#head ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-#head li:not(:last-child) {
-  margin-right: 1em;
+  @apply bg-white/30 backdrop-blur-md;
+  @apply sticky top-0 z-50 py-2;
+  h1 {
+    @apply lexend-bold;
+  }
+  ul {
+    @apply flex;
+  }
+  li {
+    &:not(:last-child) {
+      @apply mr-4;
+    }
+  }
 }
 
 #body {
-  scroll-snap-type: y mandatory;
-}
-
-#body > section {
-  height: 100dvh;
-  scroll-snap-align: start;
-  outline: 1px solid red;
+  & > section {
+    .wrap {
+      @apply py-4;
+    }
+    @apply h-dvh snap-start pt-8;
+  }
+  #hero {
+    @apply bg-red-500;
+  }
+  #about {
+    @apply bg-orange-500;
+  }
+  #portfolio {
+    @apply bg-yellow-500;
+  }
+  #contact {
+    @apply bg-green-500;
+  }
 }
 
 #foot {
-  scroll-snap-align: end;
+  @apply snap-start py-4;
+  @apply text-sky-200 bg-sky-700;
 }

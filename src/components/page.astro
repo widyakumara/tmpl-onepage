@@ -22,7 +22,9 @@ const title = props.title
   <body class:list={["page", props.page]}>
     <div id="root">
       <PageHead title={site.title} />
-      <div id="body"><slot /></div>
+      <div id="body">
+        <slot />
+      </div>
       <PageFoot title={site.title} year={site.year} tagline={site.tagline} />
     </div>
   </body>
