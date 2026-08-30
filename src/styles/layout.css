@@ -4,16 +4,16 @@
 }
 
 html {
-  @apply lexend;
+  @apply lexend scroll-smooth;
   color: var(--base-fore);
   background-color: var(--base-back);
   scrollbar-gutter: stable both-edges;
   scrollbar-width: thin;
-  scrollbar-color: var(--base-accent-secondary) transparent;
+  scrollbar-color: transparent transparent;
 }
 
 #root {
-  @apply mx-auto min-h-screen max-w-screen w-2xl flex flex-col;
+  @apply relative mx-auto min-h-screen max-w-screen w-2xl flex flex-col;
 }
 
 #head,
@@ -22,7 +22,8 @@ html {
 }
 
 #head {
-  @apply border-b sticky top-0;
+  @apply border-b fixed top-0;
+  width: inherit;
   background-color: color-mix(in srgb, var(--base-back), transparent 25%);
   backdrop-filter: blur(2px);
   h1 {
@@ -64,5 +65,28 @@ html {
 }
 
 #body {
-  @apply flex-1 py-3;
+  @apply flex-1 h-dvh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  section {
+    scroll-snap-stop: always;
+    scroll-snap-align: start;
+    @apply h-dvh;
+    padding-top: 41px;
+    & > div {
+      @apply h-full py-2;
+    }
+  }
+  #hero {
+    @apply bg-red-500;
+  }
+  #about {
+    @apply bg-green-500;
+  }
+  #contact {
+    @apply bg-blue-500;
+  }
+  #portfolio {
+    @apply bg-purple-500;
+  }
 }

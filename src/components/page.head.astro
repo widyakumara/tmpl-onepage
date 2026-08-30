@@ -2,16 +2,16 @@
 const { title } = Astro.props;
 
 const pages = [
-  { name: "about", path: "/about" },
-  { name: "portfolio", path: "/portfolio" },
-  { name: "contact", path: "/contact" },
+  { name: "about", path: "#about" },
+  { name: "portfolio", path: "#portfolio" },
+  { name: "contact", path: "#contact" },
 ];
 
 const current = Astro.url.pathname.replace(".html", "");
 ---
 
 <div id="head">
-  <h1><a href="/">{title}</a></h1>
+  <h1><a href="/#">{title}</a></h1>
   <nav>
     <ul>
       {
