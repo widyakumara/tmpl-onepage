@@ -1,0 +1,18 @@
+/* @import "tailwindcss"; */
+/* @import "tailwindcss/index"; */
+@import "tailwindcss/preflight";
+@import "tailwindcss/theme";
+/* @import "tailwindcss/utilities"; */
+@import "./layout.css";
+
+@theme {
+  --default-font-family: ui-sans-serif, system-ui, sans-serif;
+  --default-mono-font-family: ui-monospace, monospace;
+  /* colors */
+  --base-fore: var(--color-stone-700);
+  --base-line: var(--color-stone-500);
+  --base-back: var(--color-stone-300);
+  --base-accent-primary: var(--color-stone-600);
+  --base-accent-secondary: var(--color-stone-500);
+  --menu-active: theme("color.amber.500/50%");
+}
