@@ -10,6 +10,8 @@
     "esbuild": true
   },
   "scripts": {
+    "fmt": "prettier --write .",
+    "lint": "eslint .",
     "astro": "astro",
     "build": "astro build",
     "dev": "astro dev",
