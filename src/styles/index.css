@@ -3,12 +3,10 @@
 @import "tailwindcss/preflight";
 @import "tailwindcss/theme";
 /* @import "tailwindcss/utilities"; */
+@import "./webfonts.css";
 @import "./layout.css";
 
 @theme {
-  --default-font-family: ui-sans-serif, system-ui, sans-serif;
-  --default-mono-font-family: ui-monospace, monospace;
-  /* colors */
   --base-fore: var(--color-stone-700);
   --base-line: var(--color-stone-500);
   --base-back: var(--color-stone-300);
