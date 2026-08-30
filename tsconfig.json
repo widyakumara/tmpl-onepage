@@ -5,6 +5,7 @@
   "compilerOptions": {
     "paths": {
       "@components": ["./src/components/index.ts"],
+      "@sections": ["./src/sections/index.ts"],
       "@config": ["./project.config.ts"]
     }
   }

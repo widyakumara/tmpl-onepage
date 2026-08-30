@@ -1,68 +1,70 @@
 * {
-  line-height: 1em;
-  border-color: var(--base-line);
+  @apply outline-0 leading-none;
 }
 
 html {
-  @apply lexend;
+  @apply lexend scroll-smooth min-h-dvh;
+  @apply snap-y snap-mandatory;
+  @apply scrollbar-none;
+  /* @apply scrollbar-gutter-both scrollbar-thin; */
+  @apply scrollbar-thumb-transparent scrollbar-track-transparent;
   color: var(--base-fore);
   background-color: var(--base-back);
-  scrollbar-gutter: stable both-edges;
-  scrollbar-width: thin;
-  scrollbar-color: var(--base-accent-secondary) transparent;
 }
 
 #root {
-  @apply mx-auto min-h-screen max-w-screen w-2xl flex flex-col;
+  @apply mx-auto;
 }
 
 #head,
 #foot {
-  @apply flex justify-between py-3;
+  .wrap {
+    @apply flex items-center justify-between;
+  }
+}
+
+.wrap {
+  @apply mx-auto w-10/12;
 }
 
 #head {
-  @apply border-b sticky top-0;
-  background-color: color-mix(in srgb, var(--base-back), transparent 25%);
-  backdrop-filter: blur(2px);
+  @apply bg-white/30 backdrop-blur-md;
+  @apply sticky top-0 z-50 py-2;
   h1 {
     @apply lexend-bold;
-    color: var(--base-accent-primary);
   }
   ul {
-    @apply flex relative;
-    &::after {
-      content: "";
-      @apply absolute z-0;
-      position-anchor: --active-item;
-      position-area: center;
-      width: anchor-size(--active-item width, 0);
-      height: anchor-size(--active-item height, 0);
-      background-color: var(--menu-active);
-      border-radius: 4px;
-    }
+    @apply flex;
   }
   li {
-    position: relative;
-    z-index: 100;
     &:not(:last-child) {
       @apply mr-4;
     }
-    &.active {
-      @apply lexend-semi-bold;
-      color: var(--base-accent-primary);
-      anchor-name: --active-item;
-    }
-  }
-}
-
-#foot {
-  @apply border-t;
-  a {
-    @apply font-bold;
   }
 }
 
 #body {
-  @apply flex-1 py-3;
+  & > section {
+    .wrap {
+      @apply py-4;
+    }
+    @apply h-dvh snap-start pt-8;
+  }
+  #hero {
+    @apply bg-red-500;
+  }
+  #about {
+    @apply bg-orange-500;
+  }
+  #portfolio {
+    @apply bg-yellow-500;
+  }
+  #contact {
+    @apply bg-green-500;
+  }
+}
+
+#foot {
+  @apply snap-start py-4;
+  @apply text-sky-200 bg-sky-700;
 }
